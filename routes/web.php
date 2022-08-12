@@ -17,31 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/company',function() {
-    // $data = [
-    //     "service" => "IT",
-    //     "product" => "E-commerce",
-    //     "support" => 15, 
-    // ];
-
-    $data = [
-        ["service" => "IT","product" => "E-commerce","support" => 10],
-        ["service" => "IT","product" => "Mobile App","support" => 5],
-        ["service" => "Non-IT","product" => "Voice Process","support" => 0],
-    ];
-    return view('company',
-                ['data'=>$data,
-                'name'  => request('name'),
-                'age'   => request('age'),
-                ]);
-
-    // return "Axiom";          return as => application/html
-    // return ["name"=>"company",         => application/json 
-    //         "base"=>"Axiom",
-    //         "Employees"=>["che"=>"tester","sumon"=>"dev"]
-    //         ];           
-});
-
-Route::get('/company/{client}', function ($client) {
-    return view('client',['client' => $client]);
-});
+Route::get('/company','App\Http\Controllers\CompanyController@index'); //Bug: Namespace should define fully
+                                                                                    // or
+Route::get('/company/{client}',[CompanyController::class],'show');  // You can define namespace like this 
