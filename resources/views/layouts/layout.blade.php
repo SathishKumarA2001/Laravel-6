@@ -17,6 +17,7 @@
 @yield('company')
 @yield('welcome')
 @yield('services')
+@yield('client')
 <footer>
   <p>Created by Opensource 2022</p>
 </footer>

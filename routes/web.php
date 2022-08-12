@@ -41,3 +41,7 @@ Route::get('/company',function() {
     //         "Employees"=>["che"=>"tester","sumon"=>"dev"]
     //         ];           
 });
+
+Route::get('/company/{client}', function ($client) {
+    return view('client',['client' => $client]);
+});
