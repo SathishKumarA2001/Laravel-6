@@ -19,6 +19,29 @@
   <p>Axiom Consultancy</p> 
   <h4>{{$service}} - {{$product}} - {{$support}} </h4>
 </div>
+<div class="jumbotron text-center">
+@if($support > 10)
+<p>Best Customer support</p>
+@elseif($support < 5)
+<p>Worst Customer support</p>
+@else
+<p>Average Customer support</p>
+@endif
+
+@unless($service == 'IT')
+<h4>Service is not we provided</h4>
+@endunless
+
+@php
+$msg = 'Wish to work';
+echo $msg;
+@endphp
+<br>
+<?php 
+print_r($_SERVER['HTTP_HOST']); 
+?>
+
+</div>
 
 </body>
 </html>

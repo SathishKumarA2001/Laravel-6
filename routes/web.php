@@ -21,7 +21,7 @@ Route::get('/company',function() {
     $data = [
         "service" => "IT",
         "product" => "E-commerce",
-        "support" => 5, 
+        "support" => 15, 
     ];
     return view('company',$data);
 
