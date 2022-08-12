@@ -4,7 +4,7 @@
 <div class="jumbotron text-center">
   <h1>Company</h1> 
   <p>Axiom Consultancy</p> 
-
+  <img src="/images/axiom.png">
   <!-- @for($i=0; $i < count($data); $i++)
     <p>{{$data[$i]['service']}} - {{$data[$i]['product']}} - {{$data[$i]['support']}}</p>
   @endfor -->
