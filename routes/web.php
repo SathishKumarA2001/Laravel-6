@@ -18,7 +18,13 @@ Route::get('/', function () {
 });
 
 Route::get('/company',function() {
-    return view('company');
+    $data = [
+        "service" => "IT",
+        "product" => "E-commerce",
+        "support" => 5, 
+    ];
+    return view('company',$data);
+
     // return "Axiom";          return as => application/html
     // return ["name"=>"company",         => application/json 
     //         "base"=>"Axiom",

@@ -17,6 +17,7 @@
 <div class="jumbotron text-center">
   <h1>Company</h1> 
   <p>Axiom Consultancy</p> 
+  <h4>{{$service}} - {{$product}} - {{$support}} </h4>
 </div>
 
 </body>
