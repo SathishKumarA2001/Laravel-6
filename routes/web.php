@@ -29,7 +29,11 @@ Route::get('/company',function() {
         ["service" => "IT","product" => "Mobile App","support" => 5],
         ["service" => "Non-IT","product" => "Voice Process","support" => 0],
     ];
-    return view('company',['data'=>$data]);
+    return view('company',
+                ['data'=>$data,
+                'name'  => request('name'),
+                'age'   => request('age'),
+                ]);
 
     // return "Axiom";          return as => application/html
     // return ["name"=>"company",         => application/json 
