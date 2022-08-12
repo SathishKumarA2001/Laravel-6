@@ -18,12 +18,18 @@ Route::get('/', function () {
 });
 
 Route::get('/company',function() {
+    // $data = [
+    //     "service" => "IT",
+    //     "product" => "E-commerce",
+    //     "support" => 15, 
+    // ];
+
     $data = [
-        "service" => "IT",
-        "product" => "E-commerce",
-        "support" => 15, 
+        ["service" => "IT","product" => "E-commerce","support" => 10],
+        ["service" => "IT","product" => "Mobile App","support" => 5],
+        ["service" => "Non-IT","product" => "Voice Process","support" => 0],
     ];
-    return view('company',$data);
+    return view('company',['data'=>$data]);
 
     // return "Axiom";          return as => application/html
     // return ["name"=>"company",         => application/json 
