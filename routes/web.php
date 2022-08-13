@@ -25,4 +25,6 @@ Route::get('/company/create','App\Http\Controllers\CompanyController@create');
 
 Route::post('/company/store','App\Http\Controllers\CompanyController@store');
 
+Route::delete('/company/complete/{id}','App\Http\Controllers\CompanyController@complete');
+
 Route::get('/news','App\Http\Controllers\CompanyController@news'); 

@@ -40,6 +40,13 @@ class CompanyController extends Controller
         return redirect('/')->with('msg','Your project has been submitted');
     }
 
+    public function complete($id) {
+        $client = Clients::findOrFail($id);
+        $client->delete();
+
+        return redirect('/');
+    }
+
     public function news(){
         $news = News::all();
         return view('news.news',['news'=>$news]);
