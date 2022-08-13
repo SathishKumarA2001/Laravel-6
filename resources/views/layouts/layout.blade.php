@@ -18,6 +18,8 @@
 @yield('welcome')
 @yield('services')
 @yield('client')
+@yield('test')
+@yield('news')
 <footer>
   <p>Created by Opensource 2022</p>
 </footer>

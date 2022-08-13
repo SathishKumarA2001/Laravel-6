@@ -19,4 +19,6 @@ Route::get('/', function () {
 
 Route::get('/company','App\Http\Controllers\CompanyController@index'); //Bug: Namespace should define fully
                                                                                     // or
-Route::get('/company/{client}',[CompanyController::class],'show');  // You can define namespace like this 
+Route::get('/company/clients/{client}','App\Http\Controllers\CompanyController@show');  // You can define namespace like this 
+
+Route::get('/company/news','App\Http\Controllers\CompanyController@news');  // You can define namespace like this 

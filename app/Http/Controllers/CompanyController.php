@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Clients;
+use App\Models\Client;
+use App\Models\News;
 
 class CompanyController extends Controller
 {
@@ -21,7 +24,16 @@ class CompanyController extends Controller
                     ]);
     }
 
-    public function show($client) {
-        return view('client',['client'=>$client]);
+    public function show($client_name) {
+        $clients = Clients::all();
+        return view('client',['clients'=>$clients],['client_name'=>$client_name]);
+    }
+
+    public function news(){
+        $news = News::all();
+        return view('news',['news'=>$news]);
     }
 }
+
+
+
