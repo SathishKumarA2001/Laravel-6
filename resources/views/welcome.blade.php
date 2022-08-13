@@ -9,5 +9,7 @@
 @section('services')
 <div class="jumbotron text-center">
 <h1>Product & Services</h1>
+
+<p class="success"> {{ session('msg') }} </p>
 </div>
 @endsection

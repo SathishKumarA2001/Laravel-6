@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('project');
             $table->integer('amount');
+            $table->json('stack');
             $table->timestamps();
         });
     }

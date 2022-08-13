@@ -5,9 +5,15 @@
   <h1>Company</h1> 
   <p>Axiom Consultancy</p> 
   <img src="/images/axiom.png"><br>
-  <h4><b>{{ $client_name }}</b></h4>
-  @foreach($clients as $client)
-  <h4>{{ $client->name }} - {{ $client->project }} - {{ $client->amount }}</h4>
+
+  <h4>{{ $client->id }}</h4>
+  <h4>{{ $client->name }}</h4>
+  <h4>{{ $client->project }}</h4>
+  <h4>{{ $client->amount }}</h4>
+
+  @foreach($client->stack as $stack)
+  <p>{{ $stack }}</p>
   @endforeach
+  
 </div>
 @endsection

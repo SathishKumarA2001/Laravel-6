@@ -21,4 +21,8 @@ Route::get('/company','App\Http\Controllers\CompanyController@index'); //Bug: Na
                                                                                     // or
 Route::get('/company/clients/{client}','App\Http\Controllers\CompanyController@show');  // You can define namespace like this 
 
-Route::get('/company/news','App\Http\Controllers\CompanyController@news');  // You can define namespace like this 
+Route::get('/company/create','App\Http\Controllers\CompanyController@create');
+
+Route::post('/company/store','App\Http\Controllers\CompanyController@store');
+
+Route::get('/news','App\Http\Controllers\CompanyController@news'); 
