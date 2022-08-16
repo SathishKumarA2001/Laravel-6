@@ -15,7 +15,7 @@
                     @endif
 
                     {{ __('You are logged in!') }}
-                    <a href="/company">Company profile</a
+                    <a href="{{ route('company.index') }}">Company profile</a
                 </div>
             </div>
         </div>
