@@ -75,7 +75,6 @@
         <main class="py-4">
             @yield('content')
             @yield('company')
-            @yield('create')
             @yield('client')
             @yield('submit')
         </main>
