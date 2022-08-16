@@ -15,7 +15,7 @@
   <p>{{ $stack }}</p>
   @endforeach
   
-  <form action="/company/complete/{{ $client->id }}" method="POST">
+  <form action="{{ route('company.complete',$client->id) }}" method="POST">
     @csrf
     @method('DELETE')
     <button>Complete project </button>
