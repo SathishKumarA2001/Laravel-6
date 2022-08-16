@@ -1,4 +1,5 @@
 @extends('layouts.layout')
+@extends('layouts.app')
 
 @section('create')
 <div class="jumbotron text-center">

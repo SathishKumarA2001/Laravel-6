@@ -15,6 +15,7 @@
                     @endif
 
                     {{ __('You are logged in!') }}
+                    <a href="/company">Company profile</a
                 </div>
             </div>
         </div>
