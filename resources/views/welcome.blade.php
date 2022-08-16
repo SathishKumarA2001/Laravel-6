@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 
 @section('welcome')
-<div class="jumbotron text-center">
+<div class="jumbotron text-center axiom">
 <h1>welcome to axiom consulting</h1>
 </div>
 @endsection

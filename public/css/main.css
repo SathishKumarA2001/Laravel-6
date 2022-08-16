@@ -1,4 +1,6 @@
-footer {
-    padding : 20px;
-    text-align: center;
+.axiom {
+  color: red !important;
+}
+.axiom h1 {
+  background-color: bisque !important;
 }

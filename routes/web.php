@@ -28,3 +28,7 @@ Route::post('/company/store','App\Http\Controllers\CompanyController@store');
 Route::delete('/company/complete/{id}','App\Http\Controllers\CompanyController@complete');
 
 Route::get('/news','App\Http\Controllers\CompanyController@news'); 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

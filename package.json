@@ -1,14 +1,44 @@
 {
-    "private": true,
-    "scripts": {
-        "dev": "vite",
-        "build": "vite build"
-    },
-    "devDependencies": {
-        "axios": "^0.27",
-        "laravel-vite-plugin": "^0.5.0",
-        "lodash": "^4.17.19",
-        "postcss": "^8.1.14",
-        "vite": "^3.0.0"
-    }
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "@popperjs/core": "^2.10.2",
+    "@vitejs/plugin-vue": "^3.0.3",
+    "axios": "^0.27",
+    "bootstrap": "^5.1.3",
+    "laravel-mix": "^6.0.49",
+    "laravel-vite-plugin": "^0.5.3",
+    "lodash": "^4.17.19",
+    "postcss": "^8.1.14",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.32.11",
+    "sass-loader": "^12.6.0",
+    "vite": "^3.0.7",
+    "vue": "^3.2.37",
+    "vue-loader": "^16.8.3"
+  },
+  "dependencies": {
+    "mix": "^0.0.1"
+  },
+  "name": "blog",
+  "description": "<p align=\"center\"><a href=\"https://laravel.com\" target=\"_blank\"><img src=\"https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg\" width=\"400\"></a></p>",
+  "version": "1.0.0",
+  "main": "vite.config.js",
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SathishKumarA2001/Laravel-6.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SathishKumarA2001/Laravel-6/issues"
+  },
+  "homepage": "https://github.com/SathishKumarA2001/Laravel-6#readme"
 }
