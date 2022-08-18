@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CompanyController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,18 +18,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/company','App\Http\Controllers\CompanyController@index')->name('company.index')->middleware('auth'); //Bug: Namespace should define fully
-                                                                                    // or
-Route::get('/company/clients/{client}','App\Http\Controllers\CompanyController@show');  // You can define namespace like this 
-
-Route::get('/company/create','App\Http\Controllers\CompanyController@create');
-
-Route::post('/company/store','App\Http\Controllers\CompanyController@store');
-
-Route::delete('/company/complete/{id}','App\Http\Controllers\CompanyController@complete')->name('company.complete');
-
-Route::get('/news','App\Http\Controllers\CompanyController@news'); 
-
+Route::get('/company',[CompanyController::class,'index'])->name('company.index')->middleware('auth');                                                                                 // or
+Route::get('/company/clients/{client}',[CompanyController::class,'show']);  // You can define namespace like this 
+Route::get('/company/create',[CompanyController::class,'create']);
+Route::post('/company/store',[CompanyController::class,'store']);
+Route::delete('/company/complete/{id}',[CompanyController::class,'complete'])->name('company.complete');
+Route::get('/news',[CompanyController::class,'news']); 
 Auth::routes();
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/my_blades/{name}', function() {
+    return view('/my_blades/Display',["name" => 'che']);
+});
